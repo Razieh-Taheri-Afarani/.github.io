@@ -90,6 +90,7 @@ footer a{color:#9fe0f5}
 @media(max-width:860px){.bar{flex-wrap:wrap;gap:6px 16px;padding:10px 16px}.top nav{width:100%;margin:0}.hero .in{padding:150px 18px 34px}.facts{grid-template-columns:1fr 1fr}.wrap{padding:0 18px}.sec{padding:60px 0 44px}.row{grid-template-columns:1fr}.tiles,.refs{grid-template-columns:1fr}.pub{grid-template-columns:1fr}.pub .tag{justify-self:start;order:3}.pub .role{order:2}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero h1,.hero .lead,.cta,.facts{animation:none}.js .rv{opacity:1;transform:none;transition:none}h2::after{width:72px;transition:none}}
 
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:#0b1b2b;color:#fff;border:1px solid #35506a;padding:12px 20px;border-radius:999px;font:500 .92rem "Public Sans",sans-serif;opacity:0;pointer-events:none;transition:.3s;z-index:90;max-width:92vw}.toast.on{opacity:1;transform:translate(-50%,0)}
 .sys{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
 .lipo-box{position:relative;border-radius:18px;background:radial-gradient(circle at 50% 45%,#0f2c48 0%,#07121f 70%);border:1px solid #1f3144;overflow:hidden}
 #lipo{display:block;width:100%;aspect-ratio:1/1;touch-action:pan-y;cursor:grab}#lipo:active{cursor:grabbing}
@@ -121,11 +122,11 @@ button.seg{border:1px solid #35506a;border-radius:999px}
 <div class="in">
 <h1>Razieh Taheri Afarani</h1>
 <p class="lead">I build classical density functional theory codes to study how ions arrange themselves around charged liposomes, and what that means for stability and drug delivery.</p>
-<div class="cta"><a class="btn" href="#research">See my research</a><a class="btn ghost" href="mailto:razietaheri99@gmail.com">Email me</a></div>
+<div class="cta"><a class="btn" href="#research">See my research</a><a class="btn ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=razietaheri99@gmail.com" target="_blank" rel="noopener" data-copy="razietaheri99@gmail.com">Email me</a></div>
 <dl class="facts">
 <div><dt>Degree</dt><dd>MSc Physical Chemistry, Isfahan University of Technology</dd></div>
 <div><dt>Advisor</dt><dd>Prof. Ezat Keshavarzi</dd></div>
-<div><dt>Methods</dt><dd>cDFT, MATLAB, Python, HPC</dd></div>
+<div><dt>Methods and tools</dt><dd>Classical DFT, Kernel Ridge Regression, MATLAB, Python, HPC (SLURM)</dd></div>
 <div><dt>Based in</dt><dd>Isfahan, Iran</dd></div>
 </dl>
 </div>
@@ -208,11 +209,11 @@ button.seg{border:1px solid #35506a;border-radius:999px}
 <section class="sec" id="referees"><div class="wrap">
 <h2>Academic referees</h2>
 <div class="refs">
-<div class="ref"><b>Prof. Ezat Keshavarzi</b><span>Dept. of Physical Chemistry, IUT</span><a href="mailto:keshavrz@iut.ac.ir">keshavrz@iut.ac.ir</a></div>
-<div class="ref"><b>Prof. Hossein Farrokhpour</b><span>Dept. of Physical Chemistry, IUT</span><a href="mailto:h-farrokh@iut.ac.ir">h-farrokh@iut.ac.ir</a></div>
+<div class="ref"><b>Prof. Ezat Keshavarzi</b><span>Dept. of Physical Chemistry, IUT</span><a href="mailto:keshavrz@iut.ac.ir" data-copy="keshavrz@iut.ac.ir">keshavrz@iut.ac.ir</a></div>
+<div class="ref"><b>Prof. Hossein Farrokhpour</b><span>Dept. of Physical Chemistry, IUT</span><a href="mailto:h-farrokh@iut.ac.ir" data-copy="h-farrokh@iut.ac.ir">h-farrokh@iut.ac.ir</a></div>
 </div></div></section>
 
-<footer><div class="wrap"><span>© Razieh Taheri Afarani, Isfahan, Iran</span><a href="mailto:razietaheri99@gmail.com">razietaheri99@gmail.com</a></div></footer>
+<footer><div class="wrap"><span>© Razieh Taheri Afarani, Isfahan, Iran</span><a href="mailto:razietaheri99@gmail.com" data-copy="razietaheri99@gmail.com">razietaheri99@gmail.com</a></div></footer>
 
 <script>
 (function(){
@@ -233,7 +234,7 @@ size();fr(0);addEventListener("resize",function(){size();if(rm)fr(0)});
 if("IntersectionObserver" in window)new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!vis){vis=true;requestAnimationFrame(fr)}vis=v}).observe(cv.parentNode)}
 /* workflow spotlight */
 var st=d.querySelector(".stage"),sp=st.querySelector(".spot"),cap=d.querySelector(".stepcap"),dots=d.querySelector(".dots"),pp=d.querySelector(".pp"),nx=d.querySelector(".nx");
-var T=[[46.2,3.4,24.4,29.7,"1. Initialization: the density starts at its bulk value, together with ion and nanoparticle sizes, liposome geometry, concentration, charges, temperature and dielectric constants."],[54.6,40.6,37.1,19.3,"2. Solve the Euler–Lagrange equation: the hard-sphere, correlation, electrostatic and external terms give an output density."],[46.3,72.9,24.9,21.8,"3. Mix densities: the input and output densities are combined (density mixing) to form the next estimate."],[32.7,53.8,19.9,9.0,"4. Convergence check: is the summed difference between output and input density at most 0.01?"],[33.2,36.3,15.0,11.0,"5. If not (NO): the mixed density becomes the new input and the loop returns to step 2."],[10.2,73.8,13.2,6.4,"6. If yes (YES): the calculation ends and the potentials are computed from the converged profiles."]];
+var T=[[46.2,3.4,24.4,29.7,"1. Initialization: the density starts at its bulk value, together with ion and nanoparticle sizes, liposome geometry, concentration, charges, temperature and dielectric constants."],[54.6,40.6,37.1,19.3,"2. Solve the Euler–Lagrange equation: the hard-sphere, correlation, electrostatic and external terms give an output density."],[46.3,72.9,24.9,21.8,"3. Mix densities: the input and output densities are combined (density mixing) to form the next estimate."],[32.7,53.8,19.9,9.0,"4. Convergence check: is the summed difference between output and input density at most 0.01?"],[33.2,36.3,15.0,11.0,"5. If not (NO): a new input density is set and the loop returns to step 2."],[10.2,73.8,13.2,6.4,"6. If yes (YES): the calculation ends with the converged density profiles."]];
 T.forEach(function(){dots.appendChild(d.createElement("i"))});
 var i=-1,t=null,playing=false,started=false;
 function show(n){i=(n+T.length)%T.length;var a=T[i];sp.style.left=a[0]+"%";sp.style.top=a[1]+"%";sp.style.width=a[2]+"%";sp.style.height=a[3]+"%";cap.textContent=a[4];st.classList.add("on");[].forEach.call(dots.children,function(x,k){x.classList.toggle("a",k===i)})}
@@ -311,6 +312,11 @@ cv.addEventListener("pointermove",function(e){if(!drag)return;ay+=(e.clientX-lx)
 var tg=document.getElementById("labtg");tg.addEventListener("click",function(){lab=!lab;tg.setAttribute("aria-pressed",lab?"true":"false");tg.textContent=lab?"Hide labels":"Show labels";draw()});
 if("IntersectionObserver" in window)new IntersectionObserver(function(es){if(es[0].isIntersecting){if(!rm){on=false;go()}else draw()}else on=false},{threshold:.1}).observe(cv);else go();
 })();
+</script>
+<script>
+(function(){var t=document.createElement("div");t.className="toast";t.setAttribute("role","status");document.body.appendChild(t);var h;
+function say(m){t.textContent=m;t.classList.add("on");clearTimeout(h);h=setTimeout(function(){t.classList.remove("on")},3000)}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[data-copy]");if(!a)return;var m=a.getAttribute("data-copy");try{navigator.clipboard.writeText(m).then(function(){say("Email address copied: "+m)},function(){say("Email: "+m)})}catch(_){say("Email: "+m)}})})();
 </script>
 </body>
 </html>
